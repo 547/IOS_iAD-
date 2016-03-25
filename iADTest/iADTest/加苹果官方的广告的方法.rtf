@@ -1,0 +1,71 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset134 STHeitiSC-Light;}
+{\colortbl;\red255\green255\blue255;\red65\green182\blue69;\red127\green127\blue127;\red178\green24\blue137;
+\red0\green160\blue190;\red120\green109\blue196;\red198\green124\blue72;\red219\green44\blue56;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab1155
+\pard\tx1155\pardeftab1155\pardirnatural
+
+\f0\fs48 \cf2 \CocoaLigature0 /**\
+ IAD
+\f1 \'ca\'c7\'c6\'bb\'b9\'fb\'cd\'c6\'b3\'f6\'b5\'c4\'b9\'e3\'b8\'e6\'c6\'bd\'cc\'a8\'a3\'ac\'cb\'fc\'bf\'c9\'d2\'d4\'b0\'ef\'d6\'fa\'bf\'aa\'b7\'a2\'d5\'df\'b4\'d3\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d6\'d0\'bb\'f1\'c8\'a1\'ca\'d5\'c8\'eb\'a1\'a3
+\f0 \
+ \
+ 1. 
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'bc\'f2\'b5\'a5\'b5\'c4
+\f0 View based application\
+ 2. 
+\f1 \'d1\'a1\'d4\'f1\'cf\'ee\'c4\'bf\'ce\'c4\'bc\'fe\'a3\'ac\'c8\'bb\'ba\'f3\'d1\'a1\'d4\'f1\'c4\'bf\'b1\'ea\'a3\'ac\'c8\'bb\'ba\'f3\'d1\'a1\'d4\'f1\'bf\'f2\'bc\'dc\'b2\'a2\'cc\'ed\'bc\'d3
+\f0  iAd.framework
+\f1 \'a1\'a3
+\f0 \
+ 3. 
+\f1 \'b8\'fc\'d0\'c2
+\f0  ViewController.h\
+ */\cf3 \
+-(\cf4 void\cf3 )iADTest\
+\{\
+    \cf2 //
+\f1 \'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6\'b9\'e3\'b8\'e6\'cc\'f5\'ca\'d3\'cd\'bc
+\f0 \cf3 \
+    \cf5 ADBannerView\cf3  *bannerView=[[\cf5 ADBannerView\cf3  \cf5 alloc\cf3 ]\cf5 initWithFrame\cf3 :\cf5 CGRectMake\cf3 (\cf6 0\cf3 , \cf6 21\cf3 , \cf4 self\cf3 .\cf5 view\cf3 .\cf5 frame\cf3 .\cf5 size\cf3 .\cf5 width\cf3 , \cf6 50\cf3 )];\
+    bannerView.\cf5 delegate\cf3 =\cf4 self\cf3 ;\cf2 //
+\f1 \'c9\'e8\'d6\'c3\'b4\'fa\'c0\'ed
+\f0 \cf3 \
+    bannerView.\cf5 backgroundColor\cf3 =[\cf5 UIColor\cf3  \cf5 yellowColor\cf3 ];\
+    [\cf4 self\cf3 .\cf5 view\cf3  \cf5 addSubview\cf3 :bannerView];\
+    \
+\}\
+\cf7 #pragma mark===ADBannerViewDelegate\
+\cf2 //
+\f1 \'bd\'d3\'ca\'dc\'b9\'e3\'b8\'e6\'ca\'a7\'b0\'dc\'ca\'c7\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 \cf3 \
+-(\cf4 void\cf3 )bannerView:(\cf5 ADBannerView\cf3  *)banner didFailToReceiveAdWithError:(\cf5 NSError\cf3  *)error\
+\{\
+    \cf5 NSLog\cf3 (\cf8 @"error===%@"\cf3 ,error);\
+\}\
+\cf2 //
+\f1 \'d2\'d1\'be\'ad\'bc\'d3\'d4\'d8\'b9\'e3\'b8\'e6
+\f0 \cf3 \
+-(\cf4 void\cf3 )bannerViewDidLoadAd:(\cf5 ADBannerView\cf3  *)banner\
+\{\
+    \cf5 NSLog\cf3 (\cf8 @"
+\f1 \'d2\'d1\'be\'ad\'bc\'d3\'d4\'d8\'b9\'e3\'b8\'e6
+\f0 "\cf3 );\
+\}\
+\cf2 //
+\f1 \'bd\'ab\'d2\'aa\'bc\'d3\'d4\'d8\'b9\'e3\'b8\'e6
+\f0 \cf3 \
+-(\cf4 void\cf3 )bannerViewWillLoadAd:(\cf5 ADBannerView\cf3  *)banner\
+\{\
+ \cf5 NSLog\cf3 (\cf8 @"
+\f1 \'bd\'ab\'d2\'aa\'bc\'d3\'d4\'d8\'b9\'e3\'b8\'e6
+\f0 "\cf3 );\
+\}\
+\cf2 //
+\f1 \'b2\'e9\'bf\'b4\'b9\'e3\'b8\'e6\'bd\'e1\'ca\'f8\'a3\'ac\'bb\'d8\'b5\'bd\'b1\'be\'d2\'b3\'c3\'e6\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8
+\f0 \cf3 \
+-(\cf4 void\cf3 )bannerViewActionDidFinish:(\cf5 ADBannerView\cf3  *)banner\
+\{\
+    \cf5 NSLog\cf3 (\cf8 @"bannerViewActionDidFinish"\cf3 );\
+\}}
